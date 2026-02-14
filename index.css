@@ -1,0 +1,109 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 220 25% 98%;
+    --foreground: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    --primary: 235 85% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 75% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 10% 45%;
+    --accent: 235 90% 92%;
+    --accent-foreground: 235 85% 35%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 235 85% 60%;
+    --chart-1: 235 85% 60%;
+    --chart-2: 270 75% 65%;
+    --chart-3: 200 70% 55%;
+    --chart-4: 290 65% 60%;
+    --chart-5: 180 60% 50%;
+    --sidebar-background: 220 25% 98%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 235 85% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 235 90% 95%;
+    --sidebar-accent-foreground: 235 85% 35%;
+    --sidebar-border: 220 20% 88%;
+    --sidebar-ring: 235 85% 60%;
+    --gradient-primary: linear-gradient(135deg, hsl(235, 85%, 60%), hsl(270, 75%, 65%));
+    --gradient-card: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(220, 25%, 98%));
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 220 15% 95%;
+    --card: 220 20% 12%;
+    --card-foreground: 220 15% 95%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 95%;
+    --primary: 235 85% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 75% 70%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 20% 18%;
+    --muted-foreground: 220 10% 65%;
+    --accent: 235 85% 15%;
+    --accent-foreground: 235 85% 85%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 20%;
+    --input: 220 20% 20%;
+    --ring: 235 85% 65%;
+    --chart-1: 235 85% 65%;
+    --chart-2: 270 75% 70%;
+    --chart-3: 200 70% 60%;
+    --chart-4: 290 65% 65%;
+    --chart-5: 180 60% 55%;
+    --sidebar-background: 220 25% 10%;
+    --sidebar-foreground: 220 15% 95%;
+    --sidebar-primary: 235 85% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 235 85% 18%;
+    --sidebar-accent-foreground: 235 85% 85%;
+    --sidebar-border: 220 20% 20%;
+    --sidebar-ring: 235 85% 65%;
+    --gradient-primary: linear-gradient(135deg, hsl(235, 85%, 65%), hsl(270, 75%, 70%));
+    --gradient-card: linear-gradient(to bottom, hsl(220, 20%, 12%), hsl(220, 25%, 8%));
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+}
